@@ -93,6 +93,7 @@ func setupBlockstore(cfg *Config, kp *secp256k1.Keypair) (*blockstore.Blockstore
 func InitializeChain(chainCfg *core.ChainConfig, logger log15.Logger, sysErr chan<- error, m *metrics.ChainMetrics) (*Chain, error) {
 	cfg, err := parseChainConfig(chainCfg)
 	if err != nil {
+		panic("111111" + err.Error())
 		return nil, err
 	}
 
@@ -104,6 +105,7 @@ func InitializeChain(chainCfg *core.ChainConfig, logger log15.Logger, sysErr cha
 
 	bs, err := setupBlockstore(cfg, kp)
 	if err != nil {
+		panic("22222" + err.Error())
 		return nil, err
 	}
 
@@ -111,16 +113,19 @@ func InitializeChain(chainCfg *core.ChainConfig, logger log15.Logger, sysErr cha
 	conn := connection.NewConnection(cfg.endpoint, cfg.http, kp, logger, cfg.gasLimit, cfg.maxGasPrice, cfg.minGasPrice, cfg.gasMultiplier, cfg.egsApiKey, cfg.egsSpeed)
 	err = conn.Connect()
 	if err != nil {
+		panic("33333" + err.Error())
 		return nil, err
 	}
 	err = conn.EnsureHasBytecode(cfg.bridgeContract)
 	if err != nil {
+		panic("44444" + err.Error())
 		return nil, err
 	}
 
 	if cfg.erc20HandlerContract != utils.ZeroAddress {
 		err = conn.EnsureHasBytecode(cfg.erc20HandlerContract)
 		if err != nil {
+			panic("55555" + err.Error())
 			return nil, err
 		}
 	}
@@ -128,17 +133,20 @@ func InitializeChain(chainCfg *core.ChainConfig, logger log15.Logger, sysErr cha
 	if cfg.genericHandlerContract != utils.ZeroAddress {
 		err = conn.EnsureHasBytecode(cfg.genericHandlerContract)
 		if err != nil {
+			panic("66666" + err.Error())
 			return nil, err
 		}
 	}
 
 	bridgeContract, err := bridge.NewBridge(cfg.bridgeContract, conn.Client())
 	if err != nil {
+		panic("77777" + err.Error())
 		return nil, err
 	}
 
 	chainId, err := bridgeContract.ChainID(conn.CallOpts())
 	if err != nil {
+		panic("88888" + err.Error())
 		return nil, err
 	}
 
