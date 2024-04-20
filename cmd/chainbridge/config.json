@@ -7,13 +7,13 @@
       "endpoint": "https://polygon-rpc.com",
       "from": "0xa3bF104b053551DE495D61D229232fc4a14C3275",
       "opts": {
-        "bridge": "0xA83986C774214968D4c464d36995E454056864d9",
-        "erc20Handler": "0xe44279442a12Dc1917eebA4AbCaa76734A599609",
+        "bridge": "0xB013457A08588116C25971E4CeA119fb9f58CC89",
+        "erc20Handler": "0x18d547a9Dc2d0dCA6fF98f0Aa51edF112fb8d927",
         "erc721Handler": "0x25e327f6648029dA3cA8044A2715106bd980839d",
         "genericHandler": "0x07afDd20BacbFC3b5a806FE04760621904Af3281",
         "gasLimit": "1000000",
         "maxGasPrice": "400000000000",
-        "startBlock": "56033400",
+        "startBlock": "56034270",
         "http": "true"
       }
     },
@@ -30,7 +30,7 @@
         "genericHandler": "0xd3892319f47DD6E580582eB049cB563084124875",
         "gasLimit": "1000000",
         "maxGasPrice": "10000000000",
-        "startBlock": "262920",
+        "startBlock": "286920",
         "http": "true"
       }
     }
