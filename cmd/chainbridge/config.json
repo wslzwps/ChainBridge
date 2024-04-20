@@ -1,0 +1,38 @@
+{
+  "Chains": [
+    {
+      "name": "polygon",
+      "type": "ethereum",
+      "id": "137",
+      "endpoint": "https://polygon-rpc.com",
+      "from": "0xa3bF104b053551DE495D61D229232fc4a14C3275",
+      "opts": {
+        "bridge": "0xA83986C774214968D4c464d36995E454056864d9",
+        "erc20Handler": "0xe44279442a12Dc1917eebA4AbCaa76734A599609",
+        "erc721Handler": "0x25e327f6648029dA3cA8044A2715106bd980839d",
+        "genericHandler": "0x07afDd20BacbFC3b5a806FE04760621904Af3281",
+        "gasLimit": "1000000",
+        "maxGasPrice": "400000000000",
+        "startBlock": "56033400",
+        "http": "true"
+      }
+    },
+    {
+      "name": "msc",
+      "type": "ethereum",
+      "id": "156",
+      "endpoint": "https://rpc2.mscscan.org",
+      "from": "0xa3bF104b053551DE495D61D229232fc4a14C3275",
+      "opts": {
+        "bridge": "0xA30428fd70378c8D9D251eC18bc90Acd6FDC5666",
+        "erc20Handler": "0x5791e7465a3C682Cf472B183583baCA240637bBD",
+        "erc721Handler": "0xe66f4B4C32c69B75a2bD90c506099Db18e461Bb5",
+        "genericHandler": "0xd3892319f47DD6E580582eB049cB563084124875",
+        "gasLimit": "1000000",
+        "maxGasPrice": "10000000000",
+        "startBlock": "262920",
+        "http": "true"
+      }
+    }
+  ]
+}

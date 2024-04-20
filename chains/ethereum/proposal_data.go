@@ -4,6 +4,7 @@
 package ethereum
 
 import (
+	"fmt"
 	"math/big"
 
 	"github.com/ethereum/go-ethereum/common"
@@ -14,10 +15,18 @@ import (
 func ConstructErc20ProposalData(amount []byte, recipient []byte) []byte {
 	var data []byte
 	data = append(data, common.LeftPadBytes(amount, 32)...) // amount (uint256)
-
+	fmt.Printf("Amount as integer: %d\n", new(big.Int).SetBytes(amount))
 	recipientLen := big.NewInt(int64(len(recipient))).Bytes()
+	fmt.Printf("Recipient length as integer: %d\n", new(big.Int).SetBytes(recipientLen))
 	data = append(data, common.LeftPadBytes(recipientLen, 32)...) // length of recipient (uint256)
-	data = append(data, recipient...)                             // recipient ([]byte)
+	data = append(data, recipient...)
+
+	// Print recipient as hex
+	fmt.Printf("Recipient as hex: %x\n", recipient)
+
+	// Print final data as hex
+	fmt.Printf("Final data as hex: %x\n", data) // recipient ([]byte)
+
 	return data
 }
 
