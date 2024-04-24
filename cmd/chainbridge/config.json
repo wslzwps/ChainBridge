@@ -13,7 +13,7 @@
         "genericHandler": "0x07afDd20BacbFC3b5a806FE04760621904Af3281",
         "gasLimit": "1000000",
         "maxGasPrice": "400000000000",
-        "startBlock": "56034270",
+        "startBlock": "56183737",
         "http": "true"
       }
     },
@@ -30,7 +30,7 @@
         "genericHandler": "0xd3892319f47DD6E580582eB049cB563084124875",
         "gasLimit": "1000000",
         "maxGasPrice": "10000000000",
-        "startBlock": "286920",
+        "startBlock": "397740",
         "http": "true"
       }
     }

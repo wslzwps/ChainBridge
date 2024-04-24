@@ -6,6 +6,7 @@ package ethereum
 import (
 	"context"
 	"errors"
+	"fmt"
 	"math/big"
 	"time"
 
@@ -91,7 +92,7 @@ func (w *writer) createErc20Proposal(m msg.Message) bool {
 
 	data := ConstructErc20ProposalData(m.Payload[0].([]byte), m.Payload[1].([]byte))
 	dataHash := utils.Hash(append(w.cfg.erc20HandlerContract.Bytes(), data...))
-
+	fmt.Printf("dataHash as hex: %x\n", dataHash) // recipient ([]byte)
 	if !w.shouldVote(m, dataHash) {
 		if w.proposalIsPassed(m.Source, m.DepositNonce, dataHash) {
 			// We should not vote for this proposal but it is ready to be executed
