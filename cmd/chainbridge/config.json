@@ -4,7 +4,7 @@
       "name": "polygon",
       "type": "ethereum",
       "id": "137",
-      "endpoint": "https://polygon-pokt.nodies.app",
+      "endpoint": "https://1rpc.io/matic",
       "from": "0xa3bF104b053551DE495D61D229232fc4a14C3275",
       "opts": {
         "bridge": "0xB013457A08588116C25971E4CeA119fb9f58CC89",
@@ -13,7 +13,7 @@
         "genericHandler": "0x07afDd20BacbFC3b5a806FE04760621904Af3281",
         "gasLimit": "1000000",
         "maxGasPrice": "400000000000",
-        "startBlock": "56183737",
+        "startBlock": "56187899",
         "http": "true"
       }
     },
@@ -30,7 +30,7 @@
         "genericHandler": "0xd3892319f47DD6E580582eB049cB563084124875",
         "gasLimit": "1000000",
         "maxGasPrice": "10000000000",
-        "startBlock": "397740",
+        "startBlock": "400973",
         "http": "true"
       }
     }
