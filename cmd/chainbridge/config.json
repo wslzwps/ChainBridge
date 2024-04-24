@@ -4,7 +4,7 @@
       "name": "polygon",
       "type": "ethereum",
       "id": "137",
-      "endpoint": "https://1rpc.io/matic",
+      "endpoint": "https://polygon-rpc.com",
       "from": "0xa3bF104b053551DE495D61D229232fc4a14C3275",
       "opts": {
         "bridge": "0xB013457A08588116C25971E4CeA119fb9f58CC89",
